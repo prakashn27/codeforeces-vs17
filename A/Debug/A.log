@@ -1,0 +1,5 @@
+﻿  A.cpp
+c:\users\pnatarajan02\documents\visual studio 2017\projects\project1\a\a.cpp(140): warning C4244: 'initializing': conversion from 'double' to 'll', possible loss of data
+c:\users\pnatarajan02\documents\visual studio 2017\projects\project1\a\a.cpp(155): warning C4018: '<': signed/unsigned mismatch
+  A.vcxproj -> c:\users\pnatarajan02\documents\visual studio 2017\Projects\Project1\Debug\A.exe
+  A.vcxproj -> c:\users\pnatarajan02\documents\visual studio 2017\Projects\Project1\Debug\A.pdb (Partial PDB)
