@@ -24,8 +24,8 @@ typedef vector<pl> vpl;
 typedef vector<cd> vcd;
 
 #define REP(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#define FOR(i, begin, end) REP(i,begin,end)
 #define F0R(i, end) FOR(i, 0, end)
-#define FOR(i, begin, end) for(auto (i) = (begin); (i) < (end); (i)++)
 #define TR(it, begin, end) for (__typeof(begin) it = (begin); (it) != (end); (it)++) // for stl containers
 
 #define sz(x) (int)(x).size()
