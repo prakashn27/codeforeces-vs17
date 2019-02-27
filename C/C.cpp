@@ -5,6 +5,9 @@
 #include <set>
 #include <map>
 #include <queue>
+#include <unordered_set>
+#include <unordered_map>
+#include <list>
 
 using namespace std;
 
@@ -23,10 +26,10 @@ typedef vector<pi> vpi;
 typedef vector<pl> vpl;
 typedef vector<cd> vcd;
 
-#define REP(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#define REP(i, begin, end) for (auto i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
 #define F0R(i, end) FOR(i, 0, end)
 #define FOR(i, begin, end) for(auto (i) = (begin); (i) < (end); (i)++)
-#define TR(it, begin, end) for (__typeof(begin) it = (begin); (it) != (end); (it)++) // for stl containers
+#define TR(it, begin, end) for (auto it = (begin); (it) != (end); (it)++) // for stl containers
 
 #define sz(x) (int)(x).size()
 #define mp make_pair
@@ -38,12 +41,12 @@ typedef vector<cd> vcd;
 #define all(x) x.begin(), x.end()
 #define present(c,x) ((c).find(x) != (c).end())   // map and set
 #define cpresent(c,x) (find(all(c),x) != (c).end()) // containers
-#define tr1(x)                cerr << #x << ": " << x << endl;
-#define tr2(x, y)             cerr << #x << ": " << x << " | " << #y << ": " << y << endl;
-#define tr3(x, y, z)          cerr << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
-#define tr4(a, b, c, d)       cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
-#define tr5(a, b, c, d, e)    cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
-#define tr6(a, b, c, d, e, f) cerr << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
+#define tr1(x)                cout << #x << ": " << x << endl;
+#define tr2(x, y)             cout << #x << ": " << x << " | " << #y << ": " << y << endl;
+#define tr3(x, y, z)          cout << #x << ": " << x << " | " << #y << ": " << y << " | " << #z << ": " << z << endl;
+#define tr4(a, b, c, d)       cout << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << endl;
+#define tr5(a, b, c, d, e)    cout << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << endl;
+#define tr6(a, b, c, d, e, f) cout << #a << ": " << a << " | " << #b << ": " << b << " | " << #c << ": " << c << " | " << #d << ": " << d << " | " << #e << ": " << e << " | " << #f << ": " << f << endl;
 
 namespace io {
 	template<typename Test, template<typename...> class Ref>
@@ -137,12 +140,10 @@ int main() {
 }
 
 const int MOD = 1000000007;
-const int MX = 100001;
+const int MX = 55;
 
 // Actual solution
-int n;
+
 void solve()
 {
-	re(n);
-	pr(n);
 }

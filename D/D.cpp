@@ -5,6 +5,7 @@
 #include <set>
 #include <map>
 #include <queue>
+#include <bitset>
 
 using namespace std;
 
@@ -23,10 +24,10 @@ typedef vector<pi> vpi;
 typedef vector<pl> vpl;
 typedef vector<cd> vcd;
 
-#define REP(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#define REP(i, begin, end) for (auto i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
 #define F0R(i, end) FOR(i, 0, end)
 #define FOR(i, begin, end) for(auto (i) = (begin); (i) < (end); (i)++)
-#define TR(it, begin, end) for (__typeof(begin) it = (begin); (it) != (end); (it)++) // for stl containers
+#define TR(it, begin, end) for (auto it = (begin); (it) != (end); (it)++) // for stl containers
 
 #define sz(x) (int)(x).size()
 #define mp make_pair
@@ -140,7 +141,29 @@ const int MOD = 1000000007;
 const int MX = 100001;
 
 // Actual solution
+int n, m;
+ll stations[105];
+ll d[205];
 void solve()
 {
-
+	re(n, m);
+	REP(i, 1, n + 1) d[i] = 1e9;
+	REP(i, 1, m+1) {
+		ll start, dest;
+		re(start, dest);
+		stations[start]++;
+		d[start] = min(d[start],(dest < start) ? (dest + n - start) : (dest - start));
+	}
+	//REP(i, 1, n + 1) pr(stations[i]);
+	//REP(i, 1, n+1) pr(i, d[i]);
+	for (int i = 1; i <= n; ++i) {
+		ll ans = 0;
+		for (int j = 1; j <= n; ++j) { 
+			if (stations[j]) {
+				ll to = ((j >= i) ? (j - i) : (n - i + j)) + (stations[j] - 1)*n + d[j];
+				ans = max(ans, to);
+			}
+		}
+		printf("%d ", ans);
+	}
 }

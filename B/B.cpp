@@ -5,6 +5,7 @@
 #include <set>
 #include <map>
 #include <queue>
+#include <bitset>
 
 using namespace std;
 
@@ -23,10 +24,10 @@ typedef vector<pi> vpi;
 typedef vector<pl> vpl;
 typedef vector<cd> vcd;
 
-#define REP(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#define REP(i, begin, end) for (auto i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
 #define FOR(i, begin, end) REP(i,begin,end)
 #define F0R(i, end) FOR(i, 0, end)
-#define TR(it, begin, end) for (__typeof(begin) it = (begin); (it) != (end); (it)++) // for stl containers
+#define TR(it, begin, end) for (auto it = (begin); (it) != (end); (it)++) // for stl containers
 
 #define sz(x) (int)(x).size()
 #define mp make_pair
@@ -137,12 +138,10 @@ int main() {
 }
 
 const int MOD = 1000000007;
-const int MX = 100001;
+const int MX = 101;
 
 // Actual solution
-int n;
+
 void solve()
 {
-	re(n);
-	pr(n);
 }
